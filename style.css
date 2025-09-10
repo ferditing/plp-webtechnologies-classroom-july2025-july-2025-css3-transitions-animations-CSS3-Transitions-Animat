@@ -1,0 +1,64 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 2rem;
+}
+
+/* Part 1: CSS hover + keyframe animations */
+#hoverBtn {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+#hoverBtn:hover {
+  background: #0055cc;
+  transform: scale(1.1);
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 20px auto;
+  animation: pulse 2s infinite alternate;
+}
+@keyframes pulse {
+  from { transform: scale(1); opacity: 1; }
+  to   { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* Part 3: JavaScript-triggered animations */
+.box {
+  width: 100px;
+  height: 100px;
+  background: limegreen;
+  margin: 20px auto;
+  transition: transform 0.6s ease;
+}
+.box.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid #0077ff;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  opacity: 0;
+  transition: top 0.6s ease, opacity 0.6s ease;
+}
+.modal.active {
+  top: 20%;
+  opacity: 1;
+}
